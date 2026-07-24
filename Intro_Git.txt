@@ -98,7 +98,7 @@ On Ubuntu/Debian(Bash)
             create mode 100644 Index.html
             create mode 100644 Intro_Git.txt
 
-5.Git Log, Git Status, and Git Diff
+5.Git Log, Git Status, and Git Diff,git show
     
     a. git log :-
         The git log command displays the commit history of your Git repository.
@@ -150,7 +150,50 @@ On Ubuntu/Debian(Bash)
         -console.log("Hello");
         +console.log("Hello World");
 
-       
+    d.Git Show:-
+        The git show command displays detailed information about a commit, including the commit message, author, date, and the changes (diff) introduced by that commit.
+        Syntax
+        Show the latest commit:
+            git show
+        Show a specific commit:
+            git show <commit_hash>
+        Example:
+            git show 3a7b9f1
+        Example Output
+            PS D:\RudraLLP\Preparation\Git HUB> git show f530a07d2cee1f7aac3e186075d9a26d6b875eba:Index.html
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Document</title>
+                </head>
+                <body>
+                    
+                </body>
+                </html>
+
+        Common Uses
+            Show the latest commit
+                git show
+            Show a specific commit
+                git show <commit_hash>
+            Show only the commit message
+                git show --no-patch
+                or
+                git show -s
+            Show only the names of changed files
+                git show --name-only
+            Show changed files with their status
+                git show --name-status
+
+        Summary
+            Command	                           Purpose
+            git show	                        Display details of the latest commit.
+            git show <commit_hash>	            Display details of a specific commit.
+            git show --no-patch	                Show commit information without the diff.
+            git show --name-only	            List only the files changed in the commit.
+            git show --name-status	            Show changed files along with their status (Added, Modified, Deleted).
 ---------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------
