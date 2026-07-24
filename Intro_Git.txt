@@ -1,0 +1,22 @@
+//--------------------------------------------------\
+//    GIT and GIT HUB
+//--------------------------------------------------
+  
+// What is GIT?
+1.Git is a distributed version control system (VCS).
+2.Git is a tool that helps multiple people work on the 
+same code project or documents by trcking and managing changes
+to the files.
+
+//What is VCS?
+Everytime you make a change,whether it's adding a sentence
+to a document or altering a line of code,the VCS records and 
+saves the outcome.
+
+//Why VCS?
+1.Backup and Restore:Files are safe against accidental losses
+  or mistakes.
+2.Collaboration: Multiple people can work on the same project simultaneously.
+3.Branching and Merging: Users can diverge from the main base of code,
+  experiment,and then bring changes back in line without losing work. 
+4.Tracking Changes: You can see specific changes made and by whom.
