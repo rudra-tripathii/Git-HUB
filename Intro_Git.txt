@@ -1,4 +1,4 @@
-//--------------------------------------------------\
+//--------------------------------------------------
 //    GIT and GIT HUB
 //--------------------------------------------------
   
@@ -7,16 +7,165 @@
 2.Git is a tool that helps multiple people work on the 
 same code project or documents by trcking and managing changes
 to the files.
-
-//What is VCS?
+---------------------------------------------------------------------------------------------------------
+// What is VCS?
 Everytime you make a change,whether it's adding a sentence
 to a document or altering a line of code,the VCS records and 
 saves the outcome.
 
-//Why VCS?
+// Why VCS?
 1.Backup and Restore:Files are safe against accidental losses
   or mistakes.
 2.Collaboration: Multiple people can work on the same project simultaneously.
 3.Branching and Merging: Users can diverge from the main base of code,
   experiment,and then bring changes back in line without losing work. 
 4.Tracking Changes: You can see specific changes made and by whom.
+
+-----------------------------------------------------------------------------------------------------------
+// Git Installation?
+1.Go to this Url https://git-scm.com/install/ 
+  Or Visit the Git Website.
+2.The website will automatically detect your operating system (Windows, macOS, or Linux).
+3.Click Download if it doesn't start automatically.
+4.Install Git-----
+On Windows
+    a.Open the downloaded .exe file.
+    b.Click Next through the installation wizard (the default settings are fine for most users).
+    c.Click Install.
+    d.Click Finish after installation completes.
+On macOS
+    Option-1.Open the downloaded installer and follow the installation steps.
+    Option-2.Alternatively, if you have Homebrew:
+            Use This Command :-brew install git
+On Ubuntu/Debian(Bash)
+    a.sudo apt update
+    b.sudo apt install git
+
+5.Verify Installation----
+    a.Open Command Prompt, Terminal, or PowerShell and run:
+        git --version
+        output:-git version 2.51.0
+        
+6.Configure Git With Username and Email(First Time Only)-------
+    a.Set your name:git config --global user.name "Your Name"
+    b.Set your email:git config --global user.email "your.email@example.com"
+    c.Verify your configuration:git config --list
+
+//Congratulations! Your Git installation is now complete and ready to use.
+---------------------------------------------------------------------------------------------------------
+//Create New or Local Git Repo
+
+1.Check All Files in Folder:- 
+    PS D:\RudraLLP\Preparation\Git HUB> ls 
+    Response:-
+        Directory: D:\RudraLLP\Preparation\Git HUB
+
+        Mode                 LastWriteTime         Length Name                                        
+        ----                 -------------         ------ ----                                        
+        -a----         7/25/2026  12:23 AM              0 Index.html                                  
+        -a----         7/24/2026  11:52 PM            886 Intro_Git.txt  
+
+2.Git Initialization/Commit :
+    -PS D:\RudraLLP\Preparation\Git HUB> git init
+        Initialized empty Git repository in D:/RudraLLP/Preparation/Git HUB/.git/
+
+3.Add File in Repo:-
+    ------------------------------------------------------------------------------------------------------------------------------
+    Command	                What it does
+    git add *	            Adds all files matched by the shell's * wildcard in the current directory. 
+                            It depends on your shell and may not include hidden files (.env, .gitignore) or deleted files.
+   
+    git add <file_name>     Adds only the specified file to the staging area.
+    ------------------------------------------------------------------------------------------------------------------------------
+    PS D:\RudraLLP\Preparation\Git HUB> git add *
+    PS D:\RudraLLP\Preparation\Git HUB> git status
+        On branch master
+        No commits yet
+        Changes to be committed:
+        (use "git rm --cached <file>..." to unstage)
+                new file:   Index.html
+                new file:   Intro_Git.txt
+
+4.Add Commit in Repo(Specify What I Do)
+    Git Commit:-git commit saves the changes that are currently in the staging area as a new snapshot in your Git repository.
+    Syntax:-
+    git commit -m "Your commit message"
+    Example:-
+    PS D:\RudraLLP\Preparation\Git HUB> git commit -m "Git Hub Tutorial and All Command Step Wise"
+        Response:-
+            [master (root-commit) f530a07] Git Hub Tutorial and All Command Step Wise
+            2 files changed, 33 insertions(+)
+            create mode 100644 Index.html
+            create mode 100644 Intro_Git.txt
+
+5.Git Log, Git Status, and Git Diff
+    
+    a. git log :-
+        The git log command displays the commit history of your Git repository.
+        Syntax:- git log
+        Example Output:-
+            PS D:\RudraLLP\Preparation\Git HUB> git log
+            commit f530a07d2cee1f7aac3e186075d9a26d6b875eba (HEAD -> master)
+            Author: Rudra <rudra.tripathi2004@gmail.com>
+            Date:   Sat Jul 25 00:46:57 2026 +0530
+
+                Git Hub Tutorial and All Command Step Wise
+    b.git status :-
+        The git status command shows the current state of your working directory and staging area.
+
+        It tells you:
+
+        Which files are modified
+        Which files are staged
+        Which files are untracked
+        Whether your branch is up to date
+
+        Syntax :-git status
+        Example :-
+            PS D:\RudraLLP\Preparation\Git HUB> git status
+            On branch master
+            Changes not staged for commit:
+            (use "git add <file>..." to update what will be committed)
+            (use "git restore <file>..." to discard changes in working directory)
+                    modified:   Index.html
+                    modified:   Intro_Git.txt
+
+            no changes added to commit (use "git add" and/or "git commit -a")
+    
+    c.git diff:-
+        The git diff command shows the exact changes made in your files.
+         The symbols mean:
+        - → Removed line
+        + → Added line
+        Syntax:-git diff
+        Example
+        Suppose app.js originally contains:
+        console.log("Hello");
+        After editing:
+        console.log("Hello World");
+       
+        Run:
+        git diff
+        Output:
+        -console.log("Hello");
+        +console.log("Hello World");
+
+       
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
